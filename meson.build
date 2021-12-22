@@ -4,7 +4,12 @@ project('katan', 'c',
 
 rl_dep = dependency('raylib')
 
+sources = ['rules.c', 'katan.c']
+
+tests = executable('tests', sources: ['tests.c', 'rules.c'], dependencies: [rl_dep])
+test('rule test', tests)
+
 executable('katan',
-           'katan.c',
+           sources: sources,
            dependencies: [rl_dep],
            install : true)
