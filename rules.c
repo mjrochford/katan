@@ -141,17 +141,6 @@ void initalizeGameBoard()
     }
 }
 
-void uSizeListPrint(USizeList *head)
-{
-    head = head->next;
-    printf("{%ld", head->data);
-    while (head->next) {
-        printf(", %ld", head->next->data);
-        head = head->next;
-    }
-    printf("}\n");
-}
-
 void usizeArrayPrint(size_t *arr, size_t len)
 {
     printf("{%ld", arr[0]);
